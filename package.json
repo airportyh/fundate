@@ -9,9 +9,17 @@
   "scripts": {
     "test": "mocha"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/airportyh/fundate.git"
+  },
   "keywords": [
     "date"
   ],
   "author": "Toby Ho",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/airportyh/fundate/issues"
+  },
+  "homepage": "https://github.com/airportyh/fundate#readme"
 }
