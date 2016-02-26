@@ -162,6 +162,11 @@ suite('manipulation', function() {
     });
   });
 
+  /*
+  Operators >, <, >=, <=, and - already work directly with date objects.
+  But == doesn't, so we add a convinience .equals function.
+  Easily converting a duration in ms to a duration object is desired.
+  */
   test('equals', function() {
     assert(date.equal(new Date(2016, 0, 1), new Date(2016, 0, 1)));
     assert(!date.equal(new Date(2015, 1, 4), new Date(2016, 0, 1)));

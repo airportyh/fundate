@@ -26,3 +26,24 @@ The principles behind this project are:
 ## Code
 
 For now, to see some code, please read the tests.
+
+## Feature Scope
+
+At the current moment, I am focusing on
+
+* date manipulation
+  * time durations
+  * adding and subtracting time durations
+  * `startOfYear()`, `startOfMonth()`, `startOfDay()`, etc
+* date parsing with custom formatting like strptime or moment.js
+* date formatting with custom formatting like strftime or moment.js
+* a second mirroring set of utility functions for working in utc mode
+* humanized wording of time durations
+
+## Contributing
+
+At this stage, I could use contributions in
+
+1. design discussions
+2. test code
+3. implementation code
