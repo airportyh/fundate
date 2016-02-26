@@ -1,6 +1,6 @@
 # fundate
 
-This library grew out of some frustration of using moment.js. That is not to say I hate moment.js - clearly I like it because I have been using it - but that I think a date library with a better library - for me - could exist.
+This library grew out of some frustration of using moment.js. That is not to say I hate moment.js - clearly I like it because I have been using it - but that I think a date library with a better API - for me - could exist.
 
 This library is a work in progress and is far from feature parity with moment.js.
 
