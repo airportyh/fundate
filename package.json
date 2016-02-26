@@ -1,0 +1,17 @@
+{
+  "name": "fundate",
+  "version": "0.0.1",
+  "description": "Functional style date utility library.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "date"
+  ],
+  "author": "Toby Ho",
+  "license": "MIT"
+}
