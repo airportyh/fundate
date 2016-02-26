@@ -1,6 +1,6 @@
 {
   "name": "fundate",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Functional style date utility library.",
   "main": "index.js",
   "directories": {
