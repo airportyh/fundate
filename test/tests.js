@@ -39,38 +39,8 @@ suite('manipulation', function() {
     test('convert a millisecond value to a duration');
     test('humanize a duration');
 
-    test('creates duration', function() {
-      var duration = date.duration({
-        years: 1,
-        months: 2,
-        days: 3,
-        hours: 3,
-        minutes: 3,
-        seconds: 2,
-        milliseconds: 4
-      });
-      assert.equal(duration.years, 1);
-      assert.equal(duration.months, 2);
-      assert.equal(duration.days, 3);
-      assert.equal(duration.hours, 3);
-      assert.equal(duration.seconds, 2);
-      assert.equal(duration.minutes, 3);
-      assert.equal(duration.milliseconds, 4);
-    });
-
-    test('it defaults fields to zeros', function() {
-      var duration = date.duration({});
-      assert.equal(duration.years, 0);
-      assert.equal(duration.months, 0);
-      assert.equal(duration.days, 0);
-      assert.equal(duration.hours, 0);
-      assert.equal(duration.seconds, 0);
-      assert.equal(duration.minutes, 0);
-      assert.equal(duration.milliseconds, 0);
-    });
-
     test('adds duration', function() {
-      var duration = date.duration({
+      var duration = {
         years: 1,
         months: 2,
         days: 3,
@@ -78,7 +48,7 @@ suite('manipulation', function() {
         minutes: 3,
         seconds: 2,
         milliseconds: 4
-      });
+      };
       var d = new Date(2016, 0, 1, 5, 6, 7, 8);
       var d2 = date.add(d, duration);
       assert.equal(d2.getFullYear(), 2017);

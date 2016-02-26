@@ -76,29 +76,15 @@ exports.strftime = function(dt, fmt) {
   });
 };
 
-exports.duration = duration;
-function duration(dur) {
-  return {
-    years: dur.years || 0,
-    months: dur.months || 0,
-    days: dur.days || 0,
-    hours: dur.hours || 0,
-    minutes: dur.minutes || 0,
-    seconds: dur.seconds || 0,
-    milliseconds: dur.milliseconds || 0
-  };
-};
-
 exports.add = function(dt, dur) {
-  dur = duration(dur);
   return new Date(
-    dt.getFullYear() + dur.years, 
-    dt.getMonth() + dur.months, 
-    dt.getDate() + dur.days,
-    dt.getHours() + dur.hours,
-    dt.getMinutes() + dur.minutes,
-    dt.getSeconds() + dur.seconds,
-    dt.getMilliseconds() + dur.milliseconds
+    dt.getFullYear() + (dur.years || 0), 
+    dt.getMonth() + (dur.months || 0), 
+    dt.getDate() + (dur.days || 0),
+    dt.getHours() + (dur.hours || 0),
+    dt.getMinutes() + (dur.minutes || 0),
+    dt.getSeconds() + (dur.seconds || 0),
+    dt.getMilliseconds() + (dur.milliseconds || 0)
   );
 };
 
