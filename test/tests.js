@@ -174,4 +174,6 @@ suite('manipulation', function() {
 
 });
 
-suite.skip('utc', function(){});
+suite('utc', function() {});
+
+suite('timezones', function() {});
