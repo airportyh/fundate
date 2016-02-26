@@ -12,6 +12,15 @@ suite('strptime', function() {
     assert.equal(d.getMinutes(), 30);
   });
 
+  it('fails when format doesnt match', function() {
+    try {
+      date.strptime('16-11-06', '%d/%m/%y');
+      throw new Error('Should fail');
+    } catch (e) {
+      assert.equal(e.message, 'The input does not match the format: %d/%m/%y');
+    }
+  });
+
 });
 
 suite('strftime', function() {

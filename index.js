@@ -6,9 +6,8 @@ exports.strptime = function(str, fmt) {
   var minute = 0;
   var second = 0;
   var millisecond = 0;
-  var now = new Date();
   var codes = [];
-  var regexStr = fmt.replace(/%./g, function(arg) {
+  var regex = new RegExp(fmt.replace(/%./g, function(arg) {
     var code = arg.charAt(1);
     codes.push(code);
     switch (code) {
@@ -25,14 +24,12 @@ exports.strptime = function(str, fmt) {
       default:
         throw new Error('Unsupported code: ' + code);
     }
-  });
-  var re = new RegExp(regexStr);
-  var match = str.match(re);
+  }));
+  var match = str.match(regex);
   if (!match) {
     throw new Error('The input does not match the format: ' + fmt);
   }
-  var values = match.slice(1);
-  values.forEach(function(value, idx) {
+  match.slice(1).forEach(function(value, idx) {
     var code = codes[idx];
     switch (code) {
       case 'y':
