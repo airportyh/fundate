@@ -1,7 +1,25 @@
 var date = require('../');
 var assert = require('assert');
 
-suite('parse', function() {
+suite('strptime', function() {
+
+  it('parses time based on format', function() {
+    var d = date.strptime('21/11/06 16:30', '%d/%m/%y %H:%M');
+    assert.equal(d.getDate(), 21);
+    assert.equal(d.getFullYear(), 2006);
+    assert.equal(d.getMonth(), 10);
+    assert.equal(d.getHours(), 16);
+    assert.equal(d.getMinutes(), 30);
+  });
+
+});
+
+suite('strftime', function() {
+
+  it('formats time based on format', function() {
+    var d = new Date(2016, 1, 2, 12, 30, 45, 374);
+    assert.equal(date.strftime(d, '%d/%m/%y %H:%M'), '2/2/2016 12:30');
+  });
 
 });
 
@@ -174,10 +192,6 @@ suite('manipulation', function() {
 
   test('isDST');
   test('isLeapYear');
-
-});
-
-suite('format', function() {
 
 });
 
